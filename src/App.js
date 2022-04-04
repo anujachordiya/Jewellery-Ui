@@ -14,38 +14,24 @@ import Footer from "./components/footer";
 
 function App() {
   return (
-    <div className="">
-      <Navigation />
+    <>
+      <div className="sm:px-16 sm:py-8 lg:px-0 lg:py-0 ">
+        <Navigation />
+      </div>
+
       <div className="mx-16 mb-16">
         <Banner />
         <BhimaAdvantages />
         <ExploreJewellery />
-        <JewelleryBanner/>
+        <JewelleryBanner />
         <BridalCollection />
         <StoreNearMe />
         <AboutUs />
         <FollowUs />
-        <InformationCard/>
-        <Footer/>
+        <InformationCard />
+        <Footer />
       </div>
-    </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //     <p className='text-gray-600 font-semibold '>hello ji</p>
-    //   </header>
-    // </div>
+    </>
   );
 }
 

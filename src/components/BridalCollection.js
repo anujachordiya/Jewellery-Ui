@@ -1,6 +1,6 @@
 function BridalCollection() {
   return (
-    <section className="" style={{backgroundColor:'#ae9e94'}}>
+    <section className="mt-6" style={{backgroundColor:'#ae9e94'}}>
       <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 md:px-6 lg:px-8">
         <div className="py-12 px-4 sm:px-6 md:flex md:flex-col md:py-16 md:pl-0 md:pr-10  lg:pr-16">
           <div className="md:flex-shrink-0">

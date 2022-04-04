@@ -3,12 +3,6 @@ import { Menu, Popover, Transition } from "@headlessui/react";
 import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline";
 import { SearchIcon } from "@heroicons/react/solid";
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-};
 const navigation = [
   { name: "HOME", href: "#", current: true },
   { name: "ABOUT US", href: "#", current: false },
@@ -34,8 +28,7 @@ function classNames(...classes) {
 export default function Navigation() {
   return (
     <>
-      
-      <div className="min-h-full">
+      <div className="lg:min-h-full">
         <Popover as="header" className="">
           {({ open }) => (
             <>
@@ -47,7 +40,7 @@ export default function Navigation() {
                       <span className="sr-only">Workflow</span>
                       <img
                         className="w-auto"
-                        style={{height:'75px'}}
+                        style={{ height: "75px" }}
                         src="/assets/logo.svg"
                         alt="Workflow"
                       />
@@ -58,13 +51,14 @@ export default function Navigation() {
                   <div className="hidden lg:ml-4 lg:flex lg:items-center">
                     <p className="font-medium px-2"> 1800-400-0661</p>
                     <p className="font-medium px-2">LOGIN</p>
-                    <p className="font-medium pl-2 pr-4 border-r border-gray-500">SIGNUP</p>
+                    <p className="font-medium pl-2 pr-4 border-r border-gray-500">
+                      SIGNUP
+                    </p>
                     <button
                       type="button"
                       className="flex-shrink-0 p-1 ml-3 text-indigo-200 rounded-full hover:text-white hover:bg-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white"
                     >
                       <span className="sr-only">View notifications</span>
-                      {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-6 w-6"
@@ -85,7 +79,6 @@ export default function Navigation() {
                       className="flex-shrink-0 p-1 text-indigo-200 rounded-full hover:text-white hover:bg-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white"
                     >
                       <span className="sr-only">View notifications</span>
-                      {/* <BellIcon className="h-6 w-6" aria-hidden="true" /> */}
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="h-6 w-6"
@@ -102,16 +95,10 @@ export default function Navigation() {
                       </svg>
                     </button>
 
-                    {/* Profile dropdown */}
                     <Menu as="div" className="ml-4 relative flex-shrink-0">
                       <div>
                         <Menu.Button className="bg-white rounded-full flex text-sm ring-2 ring-white ring-opacity-20 focus:outline-none focus:ring-opacity-100">
                           <span className="sr-only">Open user menu</span>
-                          {/* <img
-                            className="h-8 w-8 rounded-full"
-                            src={user.imageUrl}
-                            alt=""
-                          /> */}
                         </Menu.Button>
                       </div>
                       <Transition
@@ -141,9 +128,7 @@ export default function Navigation() {
                     </Menu>
                   </div>
 
-                  {/* Menu button */}
                   <div className="absolute right-0 flex-shrink-0 lg:hidden">
-                    {/* Mobile menu button */}
                     <Popover.Button className="bg-transparent p-2 rounded-md inline-flex items-center justify-center text-indigo-200 hover:text-white hover:bg-white hover:bg-opacity-10 focus:outline-none focus:ring-2 focus:ring-white">
                       <span className="sr-only">Open main menu</span>
                       {open ? (
@@ -211,13 +196,7 @@ export default function Navigation() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
                         <div className="pt-3 pb-2">
                           <div className="flex items-center justify-between px-4">
-                            <div>
-                              <img
-                                className="h-8 w-auto"
-                                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                                alt="Workflow"
-                              />
-                            </div>
+                            <div></div>
                             <div className="-mr-2">
                               <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                 <span className="sr-only">Close menu</span>
@@ -303,14 +282,6 @@ export default function Navigation() {
                         <div className="pt-4 pb-2">
                           <div className="flex items-center px-5">
                             <div className="flex-shrink-0">1800-400-0661</div>
-                            {/* <div className="ml-3 min-w-0 flex-1">
-                              <div className="text-base font-medium text-gray-800 truncate">
-                                {user.name}
-                              </div>
-                              <div className="text-sm font-medium text-gray-500 truncate">
-                                {user.email}
-                              </div>
-                            </div> */}
                             <button
                               type="button"
                               className="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -332,10 +303,7 @@ export default function Navigation() {
                                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                                 />
                               </svg>
-                              
                             </button>
-                            
-
                           </div>
                           <div className="mt-3 px-2 space-y-1">
                             {userNavigation.map((item) => (
